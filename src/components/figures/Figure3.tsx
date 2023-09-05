@@ -1,5 +1,5 @@
 import React from 'react'
-import { IFigure } from '../Calculator'
+import { IFigure } from '../../screens/calculator/Calculator'
 import { Image, StyleSheet, Text, View } from 'react-native'
 
 
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         position: 'relative'
     },
     figure: {
-        width: 300,
+        width: 250,
         resizeMode: 'contain'
     },
     sideA: {
@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
     sideB: {
         position: 'absolute',
         transform: [
-            {translateX: 160},
-            {translateY: -50}
+            {translateX: 150},
+            {translateY: -40}
         ]
     },
     sideC: {
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     sideD: {
         position: 'absolute',
         transform: [
-            {translateX: -160},
+            {translateX: -140},
             {translateY: -10}
         ]
     },

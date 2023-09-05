@@ -12,8 +12,8 @@ import XBtn from '../components/XBtn';
 
 function LoginScreen({navigation}): JSX.Element {
 
-  const [username, setUser] = useState('admin')
-  const [passowrd, setPwd] = useState('1234')
+  const [username, setUser] = useState('')
+  const [passowrd, setPwd] = useState('')
   const [rembemberMe, setRemember] = useState(false)
   const [errors, setErrors] = useState('')
 

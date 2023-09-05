@@ -1,5 +1,5 @@
 import React from 'react'
-import { IFigure } from '../Calculator'
+import { IFigure } from '../../screens/calculator/Calculator'
 import { Image, StyleSheet, Text, View } from 'react-native'
 
 

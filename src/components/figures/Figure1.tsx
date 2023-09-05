@@ -1,12 +1,12 @@
 import React from 'react'
-import { IFigure } from '../Calculator'
+import { IFigure } from '../../screens/calculator/Calculator'
 import { Image, StyleSheet, Text, View } from 'react-native'
 
 
 interface IProps {
     figure: IFigure
 }
-export default function RightFigure(props: IProps) {
+export default function Figure1(props: IProps) {
 
     const { figure } = props
     return (

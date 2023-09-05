@@ -35,7 +35,7 @@ const Figures: React.FC<IProps> = (props: IProps) => {
                                                 figure.resolve()
                                             }}
                                         >
-                                            <Text style={{ fontSize: 16, fontWeight: '600' }}>Pick me</Text>
+                                            <Text style={{ fontSize: 16, fontWeight: '600' }}>Pick Figure</Text>
                                         </Pressable>
                                 }
                             </View>

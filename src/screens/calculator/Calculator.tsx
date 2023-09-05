@@ -4,9 +4,9 @@ import { View, useWindowDimensions } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
 import Figures from './Figures';
 import ReviewScreen from './Review';
-import RightFigure from './figures/Right';
-import Figure2 from './figures/Figure2';
-import Figure3 from './figures/Figure3';
+import Figure1 from '../../components/figures/Figure1';
+import Figure2 from '../../components/figures/Figure2';
+import Figure3 from '../../components/figures/Figure3';
 
 export interface IFigure {
     name: string,
@@ -33,7 +33,7 @@ const Calculator = () => {
                 c: ''
             },
             component() {
-                return (<RightFigure figure={this} />)
+                return (<Figure1 figure={this} />)
             },
             resolve() {
                 const b = parseFloat(this.messurements.b)
