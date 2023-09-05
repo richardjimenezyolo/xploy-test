@@ -15,7 +15,8 @@ export default function ReviewScreen(props: { figures: IFigure[] }) {
                     figures.map((figure) => (
                         <View key={figure.name}>
                             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ fontSize: 20, fontWeight: '600' }}>
+                                <Text style={{ fontSize: 20 }}>
+                                    <Text style={{fontWeight: '600'}}>Figure: </Text>
                                     {figure.name}
                                 </Text>
                             </View>
