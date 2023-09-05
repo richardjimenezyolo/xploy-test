@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import { Text } from 'react-native'
+import { Alert, Text } from 'react-native'
 import { View, useWindowDimensions } from 'react-native';
 import { TabView, SceneMap } from 'react-native-tab-view';
 import Figures from './Figures';
@@ -103,6 +103,11 @@ const Calculator = () => {
     ]);
 
     const toggle = (figure: IFigure) => {
+        if (figures.filter(el => el.picked).length >= 2 && !figure.picked) {
+            Alert.alert('Error', 'You can only pick two figures at a time')
+            return
+        }
+
         figure.picked = !figure.picked
         setFigures([...figures])
     }

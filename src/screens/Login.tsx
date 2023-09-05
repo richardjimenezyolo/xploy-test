@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  Alert,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -10,20 +11,18 @@ import CheckBox from '@react-native-community/checkbox';
 import XTextInput from '../components/XTextInput';
 import XBtn from '../components/XBtn';
 
-function LoginScreen({navigation}): JSX.Element {
+function LoginScreen({ navigation }: any): JSX.Element {
 
   const [username, setUser] = useState('')
   const [passowrd, setPwd] = useState('')
   const [rembemberMe, setRemember] = useState(false)
-  const [errors, setErrors] = useState('')
 
   const validate = () => {
-    if (username === 'admin' && passowrd === '1234') {
-      setErrors('')
-      navigation.navigate('Calculator')
+    if (username !== 'admin' || passowrd !== '1234') {
+      Alert.alert('', 'Wrong Credentials')
       return
     }
-    setErrors('Username or password invalid')
+    navigation.navigate('Calculator')
   }
 
   return (
@@ -44,10 +43,9 @@ function LoginScreen({navigation}): JSX.Element {
         <XTextInput
           label="Username"
           value={username}
-          errorMessages={errors}
-          onChange={(val: String) => setUser(val)}
+          onChange={(val: string) => setUser(val)}
         />
-        <XTextInput password label="Password" onChange={(pwd) => setPwd(pwd)} />
+        <XTextInput password label="Password" onChange={(pwd: string) => setPwd(pwd)} />
 
         <View style={styles.rembemberMe}>
           <CheckBox value={rembemberMe} onValueChange={setRemember} />
@@ -72,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   header: {
-    height: 100,
+    height: 150,
     backgroundColor: '#999',
     display: 'flex',
     justifyContent: 'center',
